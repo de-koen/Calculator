@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace Calculator
+namespace CalculatorNS
 {
-    class Calculator
+    public static class Calculator
     {
         public static double DoOperation(double num1, double num2, string op)
         {
@@ -25,6 +25,10 @@ namespace Calculator
                     if (num2 != 0)
                     {
                         result = num1 / num2;
+                    }
+                    else
+                    {
+                        throw new System.DivideByZeroException("Division by zero");
                     }
                     break;
                 // Return text for an incorrect option entry.
